@@ -1,0 +1,16 @@
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\ConsolaDePruebas\bin\Debug\ConsolaDePruebas.exe.config
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\ConsolaDePruebas\bin\Debug\ConsolaDePruebas.exe
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\ConsolaDePruebas\bin\Debug\ConsolaDePruebas.pdb
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\ConsolaDePruebas\bin\Debug\EntityFramework.dll
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\ConsolaDePruebas\bin\Debug\EntityFramework.SqlServer.dll
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\ConsolaDePruebas\bin\Debug\GestionDeSeguros.dll
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\ConsolaDePruebas\bin\Debug\Interfaces.dll
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\ConsolaDePruebas\bin\Debug\Datos.dll
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\ConsolaDePruebas\bin\Debug\GestionDeSeguros.pdb
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\ConsolaDePruebas\bin\Debug\Interfaces.pdb
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\ConsolaDePruebas\bin\Debug\EntityFramework.xml
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\ConsolaDePruebas\bin\Debug\EntityFramework.SqlServer.xml
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\ConsolaDePruebas\bin\Debug\Datos.pdb
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\ConsolaDePruebas\obj\Debug\ConsolaDePruebas.csprojResolveAssemblyReference.cache
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\ConsolaDePruebas\obj\Debug\ConsolaDePruebas.exe
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\ConsolaDePruebas\obj\Debug\ConsolaDePruebas.pdb

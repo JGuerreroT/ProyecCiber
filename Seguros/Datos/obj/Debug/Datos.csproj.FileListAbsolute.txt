@@ -1,0 +1,10 @@
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\Datos\bin\Debug\Datos.dll.config
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\Datos\bin\Debug\Datos.dll
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\Datos\bin\Debug\Datos.pdb
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\Datos\bin\Debug\EntityFramework.dll
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\Datos\bin\Debug\EntityFramework.SqlServer.dll
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\Datos\bin\Debug\EntityFramework.xml
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\Datos\bin\Debug\EntityFramework.SqlServer.xml
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\Datos\obj\Debug\Datos.dll
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\Datos\obj\Debug\Datos.pdb

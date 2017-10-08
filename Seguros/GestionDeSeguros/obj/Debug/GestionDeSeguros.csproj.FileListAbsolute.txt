@@ -1,0 +1,14 @@
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\GestionDeSeguros\bin\Debug\GestionDeSeguros.dll.config
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\GestionDeSeguros\bin\Debug\GestionDeSeguros.dll
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\GestionDeSeguros\bin\Debug\GestionDeSeguros.pdb
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\GestionDeSeguros\bin\Debug\Datos.dll
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\GestionDeSeguros\bin\Debug\EntityFramework.dll
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\GestionDeSeguros\bin\Debug\EntityFramework.SqlServer.dll
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\GestionDeSeguros\bin\Debug\Interfaces.dll
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\GestionDeSeguros\bin\Debug\Datos.pdb
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\GestionDeSeguros\bin\Debug\Interfaces.pdb
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\GestionDeSeguros\bin\Debug\EntityFramework.xml
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\GestionDeSeguros\bin\Debug\EntityFramework.SqlServer.xml
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\GestionDeSeguros\obj\Debug\GestionDeSeguros.csprojResolveAssemblyReference.cache
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\GestionDeSeguros\obj\Debug\GestionDeSeguros.dll
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\GestionDeSeguros\obj\Debug\GestionDeSeguros.pdb

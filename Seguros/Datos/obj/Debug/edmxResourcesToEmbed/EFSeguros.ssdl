@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_SegurosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="tb_Afp">
+    <Key>
+      <PropertyRef Name="CodigoAfp" />
+    </Key>
+    <Property Name="CodigoAfp" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_BeneficiarioPoliza">
+    <Key>
+      <PropertyRef Name="CodigoBeneficiario" />
+    </Key>
+    <Property Name="CodigoBeneficiario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodigoPoliza" Type="int" Nullable="false" />
+    <Property Name="CodigoPersona" Type="int" Nullable="false" />
+    <Property Name="CodigoRelacion" Type="int" Nullable="false" />
+    <Property Name="CodigoTipoPersona" Type="int" Nullable="false" />
+    <Property Name="CodigoEstado" Type="int" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_CiaSeguro">
+    <Key>
+      <PropertyRef Name="CodigoCiaSeguro" />
+    </Key>
+    <Property Name="CodigoCiaSeguro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="SimboloCia" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_Cobertura">
+    <Key>
+      <PropertyRef Name="CodigoCobertura" />
+    </Key>
+    <Property Name="CodigoCobertura" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_DocumentoIdentidad">
+    <Key>
+      <PropertyRef Name="CodigoDocumentoIdentidad" />
+    </Key>
+    <Property Name="CodigoDocumentoIdentidad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_Estado">
+    <Key>
+      <PropertyRef Name="CodigoEstado" />
+    </Key>
+    <Property Name="CodigoEstado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_Modalidad">
+    <Key>
+      <PropertyRef Name="CodigoModalidad" />
+    </Key>
+    <Property Name="CodigoModalidad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_Moneda">
+    <Key>
+      <PropertyRef Name="CodigoMoneda" />
+    </Key>
+    <Property Name="CodigoMoneda" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Simbolo" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="Simbolo2" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_Persona">
+    <Key>
+      <PropertyRef Name="CodigoPersona" />
+    </Key>
+    <Property Name="CodigoPersona" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CUSSPP" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ApellidoPaterno" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ApellidoMaterno" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Nombres" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="FechaNacimiento" Type="datetime" Nullable="false" />
+    <Property Name="FechaFallecimiento" Type="datetime" Nullable="false" />
+    <Property Name="CodigoSexo" Type="int" Nullable="false" />
+    <Property Name="CodigoDocumentoIdentidad" Type="int" Nullable="false" />
+    <Property Name="CodigoSalud" Type="int" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_Poliza">
+    <Key>
+      <PropertyRef Name="CodigoPoliza" />
+    </Key>
+    <Property Name="CodigoPoliza" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumeroPoliza" Type="int" Nullable="false" />
+    <Property Name="FechaDevengue" Type="datetime" Nullable="false" />
+    <Property Name="FechaDevengueSolicitud" Type="datetime" Nullable="false" />
+    <Property Name="FechaNotificacion" Type="datetime" Nullable="false" />
+    <Property Name="FechaEmision" Type="datetime" Nullable="false" />
+    <Property Name="PrimaUnica" Type="numeric" Precision="15" Scale="8" Nullable="false" />
+    <Property Name="PeriodoDiferido" Type="int" Nullable="false" />
+    <Property Name="PeriodoGarantizado" Type="int" Nullable="false" />
+    <Property Name="PorcentajaGarantizado" Type="numeric" Precision="15" Scale="8" Nullable="false" />
+    <Property Name="Gratificacion" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="DerechoCrecer" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="PensionDevengue" Type="numeric" Precision="15" Scale="8" Nullable="false" />
+    <Property Name="CIC" Type="numeric" Precision="15" Scale="8" Nullable="false" />
+    <Property Name="CodigoPersona" Type="int" Nullable="false" />
+    <Property Name="CodigoAfp" Type="int" Nullable="false" />
+    <Property Name="CodigoEstado" Type="int" Nullable="false" />
+    <Property Name="CodigoMoneda" Type="int" Nullable="false" />
+    <Property Name="CodigoCobertura" Type="int" Nullable="false" />
+    <Property Name="CodigoModalidad" Type="int" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_Relacion">
+    <Key>
+      <PropertyRef Name="CodigoRelacion" />
+    </Key>
+    <Property Name="CodigoRelacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="SimboloRelacion" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_Salud">
+    <Key>
+      <PropertyRef Name="CodigoSalud" />
+    </Key>
+    <Property Name="CodigoSalud" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="SimboloSalud" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_Sexo">
+    <Key>
+      <PropertyRef Name="CodigoSexo" />
+    </Key>
+    <Property Name="CodigoSexo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="SimboloSexo" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_SolicitudCotizacion">
+    <Key>
+      <PropertyRef Name="CodigoSolicitud" />
+    </Key>
+    <Property Name="CodigoSolicitud" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PrimaUnica" Type="numeric" Precision="15" Scale="8" Nullable="false" />
+    <Property Name="TasaVenta" Type="numeric" Precision="15" Scale="8" Nullable="false" />
+    <Property Name="CIC" Type="numeric" Precision="15" Scale="8" Nullable="false" />
+    <Property Name="CodigoPersona" Type="int" Nullable="false" />
+    <Property Name="CodigoAfp" Type="int" Nullable="false" />
+    <Property Name="CodigoCiaSeguro" Type="int" Nullable="false" />
+    <Property Name="CodigoModalidad" Type="int" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_TipoPersona">
+    <Key>
+      <PropertyRef Name="CodigoTipoPersona" />
+    </Key>
+    <Property Name="CodigoTipoPersona" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_tb_BeneficiarioPoliza_tb_Estado">
+    <End Role="tb_Estado" Type="Self.tb_Estado" Multiplicity="1" />
+    <End Role="tb_BeneficiarioPoliza" Type="Self.tb_BeneficiarioPoliza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Estado">
+        <PropertyRef Name="CodigoEstado" />
+      </Principal>
+      <Dependent Role="tb_BeneficiarioPoliza">
+        <PropertyRef Name="CodigoEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_BeneficiarioPoliza_tb_Persona">
+    <End Role="tb_Persona" Type="Self.tb_Persona" Multiplicity="1" />
+    <End Role="tb_BeneficiarioPoliza" Type="Self.tb_BeneficiarioPoliza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Persona">
+        <PropertyRef Name="CodigoPersona" />
+      </Principal>
+      <Dependent Role="tb_BeneficiarioPoliza">
+        <PropertyRef Name="CodigoPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_BeneficiarioPoliza_tb_Poliza">
+    <End Role="tb_Poliza" Type="Self.tb_Poliza" Multiplicity="1" />
+    <End Role="tb_BeneficiarioPoliza" Type="Self.tb_BeneficiarioPoliza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Poliza">
+        <PropertyRef Name="CodigoPoliza" />
+      </Principal>
+      <Dependent Role="tb_BeneficiarioPoliza">
+        <PropertyRef Name="CodigoPoliza" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_BeneficiarioPoliza_tb_Relacion">
+    <End Role="tb_Relacion" Type="Self.tb_Relacion" Multiplicity="1" />
+    <End Role="tb_BeneficiarioPoliza" Type="Self.tb_BeneficiarioPoliza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Relacion">
+        <PropertyRef Name="CodigoRelacion" />
+      </Principal>
+      <Dependent Role="tb_BeneficiarioPoliza">
+        <PropertyRef Name="CodigoRelacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_BeneficiarioPoliza_tb_TipoPersona">
+    <End Role="tb_TipoPersona" Type="Self.tb_TipoPersona" Multiplicity="1" />
+    <End Role="tb_BeneficiarioPoliza" Type="Self.tb_BeneficiarioPoliza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_TipoPersona">
+        <PropertyRef Name="CodigoTipoPersona" />
+      </Principal>
+      <Dependent Role="tb_BeneficiarioPoliza">
+        <PropertyRef Name="CodigoTipoPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_Persona_tb_DocumentoIdentidad">
+    <End Role="tb_DocumentoIdentidad" Type="Self.tb_DocumentoIdentidad" Multiplicity="1" />
+    <End Role="tb_Persona" Type="Self.tb_Persona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_DocumentoIdentidad">
+        <PropertyRef Name="CodigoDocumentoIdentidad" />
+      </Principal>
+      <Dependent Role="tb_Persona">
+        <PropertyRef Name="CodigoDocumentoIdentidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_Persona_tb_Salud">
+    <End Role="tb_Salud" Type="Self.tb_Salud" Multiplicity="1" />
+    <End Role="tb_Persona" Type="Self.tb_Persona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Salud">
+        <PropertyRef Name="CodigoSalud" />
+      </Principal>
+      <Dependent Role="tb_Persona">
+        <PropertyRef Name="CodigoSalud" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_Persona_tb_Sexo">
+    <End Role="tb_Sexo" Type="Self.tb_Sexo" Multiplicity="1" />
+    <End Role="tb_Persona" Type="Self.tb_Persona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Sexo">
+        <PropertyRef Name="CodigoSexo" />
+      </Principal>
+      <Dependent Role="tb_Persona">
+        <PropertyRef Name="CodigoSexo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_Poliza_tb_Afp">
+    <End Role="tb_Afp" Type="Self.tb_Afp" Multiplicity="1" />
+    <End Role="tb_Poliza" Type="Self.tb_Poliza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Afp">
+        <PropertyRef Name="CodigoAfp" />
+      </Principal>
+      <Dependent Role="tb_Poliza">
+        <PropertyRef Name="CodigoAfp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_Poliza_tb_Cobertura">
+    <End Role="tb_Cobertura" Type="Self.tb_Cobertura" Multiplicity="1" />
+    <End Role="tb_Poliza" Type="Self.tb_Poliza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Cobertura">
+        <PropertyRef Name="CodigoCobertura" />
+      </Principal>
+      <Dependent Role="tb_Poliza">
+        <PropertyRef Name="CodigoCobertura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_Poliza_tb_Estado">
+    <End Role="tb_Estado" Type="Self.tb_Estado" Multiplicity="1" />
+    <End Role="tb_Poliza" Type="Self.tb_Poliza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Estado">
+        <PropertyRef Name="CodigoEstado" />
+      </Principal>
+      <Dependent Role="tb_Poliza">
+        <PropertyRef Name="CodigoEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_Poliza_tb_Modalidad">
+    <End Role="tb_Modalidad" Type="Self.tb_Modalidad" Multiplicity="1" />
+    <End Role="tb_Poliza" Type="Self.tb_Poliza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Modalidad">
+        <PropertyRef Name="CodigoModalidad" />
+      </Principal>
+      <Dependent Role="tb_Poliza">
+        <PropertyRef Name="CodigoModalidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_Poliza_tb_Moneda">
+    <End Role="tb_Moneda" Type="Self.tb_Moneda" Multiplicity="1" />
+    <End Role="tb_Poliza" Type="Self.tb_Poliza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Moneda">
+        <PropertyRef Name="CodigoMoneda" />
+      </Principal>
+      <Dependent Role="tb_Poliza">
+        <PropertyRef Name="CodigoMoneda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_Poliza_tb_Persona">
+    <End Role="tb_Persona" Type="Self.tb_Persona" Multiplicity="1" />
+    <End Role="tb_Poliza" Type="Self.tb_Poliza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Persona">
+        <PropertyRef Name="CodigoPersona" />
+      </Principal>
+      <Dependent Role="tb_Poliza">
+        <PropertyRef Name="CodigoPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_SolicitudCotizacion_tb_Afp">
+    <End Role="tb_Afp" Type="Self.tb_Afp" Multiplicity="1" />
+    <End Role="tb_SolicitudCotizacion" Type="Self.tb_SolicitudCotizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Afp">
+        <PropertyRef Name="CodigoAfp" />
+      </Principal>
+      <Dependent Role="tb_SolicitudCotizacion">
+        <PropertyRef Name="CodigoAfp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_SolicitudCotizacion_tb_CiaSeguro">
+    <End Role="tb_CiaSeguro" Type="Self.tb_CiaSeguro" Multiplicity="1" />
+    <End Role="tb_SolicitudCotizacion" Type="Self.tb_SolicitudCotizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_CiaSeguro">
+        <PropertyRef Name="CodigoCiaSeguro" />
+      </Principal>
+      <Dependent Role="tb_SolicitudCotizacion">
+        <PropertyRef Name="CodigoCiaSeguro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_SolicitudCotizacion_tb_Modalidad">
+    <End Role="tb_Modalidad" Type="Self.tb_Modalidad" Multiplicity="1" />
+    <End Role="tb_SolicitudCotizacion" Type="Self.tb_SolicitudCotizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Modalidad">
+        <PropertyRef Name="CodigoModalidad" />
+      </Principal>
+      <Dependent Role="tb_SolicitudCotizacion">
+        <PropertyRef Name="CodigoModalidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_SolicitudCotizacion_tb_Persona">
+    <End Role="tb_Persona" Type="Self.tb_Persona" Multiplicity="1" />
+    <End Role="tb_SolicitudCotizacion" Type="Self.tb_SolicitudCotizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Persona">
+        <PropertyRef Name="CodigoPersona" />
+      </Principal>
+      <Dependent Role="tb_SolicitudCotizacion">
+        <PropertyRef Name="CodigoPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_SegurosModelStoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_Afp" EntityType="Self.tb_Afp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_BeneficiarioPoliza" EntityType="Self.tb_BeneficiarioPoliza" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_CiaSeguro" EntityType="Self.tb_CiaSeguro" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_Cobertura" EntityType="Self.tb_Cobertura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_DocumentoIdentidad" EntityType="Self.tb_DocumentoIdentidad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_Estado" EntityType="Self.tb_Estado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_Modalidad" EntityType="Self.tb_Modalidad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_Moneda" EntityType="Self.tb_Moneda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_Persona" EntityType="Self.tb_Persona" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_Poliza" EntityType="Self.tb_Poliza" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_Relacion" EntityType="Self.tb_Relacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_Salud" EntityType="Self.tb_Salud" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_Sexo" EntityType="Self.tb_Sexo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_SolicitudCotizacion" EntityType="Self.tb_SolicitudCotizacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_TipoPersona" EntityType="Self.tb_TipoPersona" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_tb_BeneficiarioPoliza_tb_Estado" Association="Self.FK_tb_BeneficiarioPoliza_tb_Estado">
+      <End Role="tb_Estado" EntitySet="tb_Estado" />
+      <End Role="tb_BeneficiarioPoliza" EntitySet="tb_BeneficiarioPoliza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_BeneficiarioPoliza_tb_Persona" Association="Self.FK_tb_BeneficiarioPoliza_tb_Persona">
+      <End Role="tb_Persona" EntitySet="tb_Persona" />
+      <End Role="tb_BeneficiarioPoliza" EntitySet="tb_BeneficiarioPoliza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_BeneficiarioPoliza_tb_Poliza" Association="Self.FK_tb_BeneficiarioPoliza_tb_Poliza">
+      <End Role="tb_Poliza" EntitySet="tb_Poliza" />
+      <End Role="tb_BeneficiarioPoliza" EntitySet="tb_BeneficiarioPoliza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_BeneficiarioPoliza_tb_Relacion" Association="Self.FK_tb_BeneficiarioPoliza_tb_Relacion">
+      <End Role="tb_Relacion" EntitySet="tb_Relacion" />
+      <End Role="tb_BeneficiarioPoliza" EntitySet="tb_BeneficiarioPoliza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_BeneficiarioPoliza_tb_TipoPersona" Association="Self.FK_tb_BeneficiarioPoliza_tb_TipoPersona">
+      <End Role="tb_TipoPersona" EntitySet="tb_TipoPersona" />
+      <End Role="tb_BeneficiarioPoliza" EntitySet="tb_BeneficiarioPoliza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_Persona_tb_DocumentoIdentidad" Association="Self.FK_tb_Persona_tb_DocumentoIdentidad">
+      <End Role="tb_DocumentoIdentidad" EntitySet="tb_DocumentoIdentidad" />
+      <End Role="tb_Persona" EntitySet="tb_Persona" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_Persona_tb_Salud" Association="Self.FK_tb_Persona_tb_Salud">
+      <End Role="tb_Salud" EntitySet="tb_Salud" />
+      <End Role="tb_Persona" EntitySet="tb_Persona" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_Persona_tb_Sexo" Association="Self.FK_tb_Persona_tb_Sexo">
+      <End Role="tb_Sexo" EntitySet="tb_Sexo" />
+      <End Role="tb_Persona" EntitySet="tb_Persona" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_Poliza_tb_Afp" Association="Self.FK_tb_Poliza_tb_Afp">
+      <End Role="tb_Afp" EntitySet="tb_Afp" />
+      <End Role="tb_Poliza" EntitySet="tb_Poliza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_Poliza_tb_Cobertura" Association="Self.FK_tb_Poliza_tb_Cobertura">
+      <End Role="tb_Cobertura" EntitySet="tb_Cobertura" />
+      <End Role="tb_Poliza" EntitySet="tb_Poliza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_Poliza_tb_Estado" Association="Self.FK_tb_Poliza_tb_Estado">
+      <End Role="tb_Estado" EntitySet="tb_Estado" />
+      <End Role="tb_Poliza" EntitySet="tb_Poliza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_Poliza_tb_Modalidad" Association="Self.FK_tb_Poliza_tb_Modalidad">
+      <End Role="tb_Modalidad" EntitySet="tb_Modalidad" />
+      <End Role="tb_Poliza" EntitySet="tb_Poliza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_Poliza_tb_Moneda" Association="Self.FK_tb_Poliza_tb_Moneda">
+      <End Role="tb_Moneda" EntitySet="tb_Moneda" />
+      <End Role="tb_Poliza" EntitySet="tb_Poliza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_Poliza_tb_Persona" Association="Self.FK_tb_Poliza_tb_Persona">
+      <End Role="tb_Persona" EntitySet="tb_Persona" />
+      <End Role="tb_Poliza" EntitySet="tb_Poliza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_SolicitudCotizacion_tb_Afp" Association="Self.FK_tb_SolicitudCotizacion_tb_Afp">
+      <End Role="tb_Afp" EntitySet="tb_Afp" />
+      <End Role="tb_SolicitudCotizacion" EntitySet="tb_SolicitudCotizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_SolicitudCotizacion_tb_CiaSeguro" Association="Self.FK_tb_SolicitudCotizacion_tb_CiaSeguro">
+      <End Role="tb_CiaSeguro" EntitySet="tb_CiaSeguro" />
+      <End Role="tb_SolicitudCotizacion" EntitySet="tb_SolicitudCotizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_SolicitudCotizacion_tb_Modalidad" Association="Self.FK_tb_SolicitudCotizacion_tb_Modalidad">
+      <End Role="tb_Modalidad" EntitySet="tb_Modalidad" />
+      <End Role="tb_SolicitudCotizacion" EntitySet="tb_SolicitudCotizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_SolicitudCotizacion_tb_Persona" Association="Self.FK_tb_SolicitudCotizacion_tb_Persona">
+      <End Role="tb_Persona" EntitySet="tb_Persona" />
+      <End Role="tb_SolicitudCotizacion" EntitySet="tb_SolicitudCotizacion" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

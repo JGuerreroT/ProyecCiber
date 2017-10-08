@@ -1,0 +1,5 @@
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\Interfaces\bin\Debug\Interfaces.dll
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\Interfaces\bin\Debug\Interfaces.pdb
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\Interfaces\obj\Debug\Interfaces.csprojResolveAssemblyReference.cache
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\Interfaces\obj\Debug\Interfaces.dll
+D:\curso Visual Studio 2015 Developer - C#\proyecto\Seguros\Interfaces\obj\Debug\Interfaces.pdb
