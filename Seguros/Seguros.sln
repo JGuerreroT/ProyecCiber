@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionDeSeguros", "Gestion
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsolaDePruebas", "ConsolaDePruebas\ConsolaDePruebas.csproj", "{C0CB1FCF-8BF8-4556-8110-E636905E0286}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfPresentacion", "WpfPresentacion\WpfPresentacion.csproj", "{6AEF8CC1-AFF5-4F30-9E2B-410607E3C9BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{C0CB1FCF-8BF8-4556-8110-E636905E0286}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0CB1FCF-8BF8-4556-8110-E636905E0286}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0CB1FCF-8BF8-4556-8110-E636905E0286}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AEF8CC1-AFF5-4F30-9E2B-410607E3C9BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AEF8CC1-AFF5-4F30-9E2B-410607E3C9BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AEF8CC1-AFF5-4F30-9E2B-410607E3C9BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AEF8CC1-AFF5-4F30-9E2B-410607E3C9BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,5 +56,6 @@ Global
 		{F44D5831-809F-4A97-9020-3E9F7A77B994} = {B82406D8-2F6D-440C-9AA3-CC418AC94DE7}
 		{52D91501-BCA0-45EB-AC5F-37CCC7FFED36} = {9505B3B1-75EA-4B92-8096-F67DFD2DCE15}
 		{C0CB1FCF-8BF8-4556-8110-E636905E0286} = {16E8342E-A279-4636-B239-AF2793FB3DFB}
+		{6AEF8CC1-AFF5-4F30-9E2B-410607E3C9BA} = {16E8342E-A279-4636-B239-AF2793FB3DFB}
 	EndGlobalSection
 EndGlobal

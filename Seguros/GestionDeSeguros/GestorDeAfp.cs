@@ -12,9 +12,17 @@ namespace GestionDeSeguros
 {
     public class GestorDeAfp : IGestorDeAfps
     {
-        public AfpRegistrada ActualizarAfp(AfpActualizada afpActualizada)
+        public AfpActualizada ActualizarAfp(AfpActualizada afpActualizada)
         {
-            throw new NotImplementedException();
+            using (DB_SegurosEntities seguros = new DB_SegurosEntities())
+            {
+                tb_Afp afp = seguros.tb_Afp.Find(afpActualizada.Id);
+                afp.CodigoAfp = afpActualizada.Id;
+                afp.Descripcion = afpActualizada.Descripcion;
+                seguros.Entry(afp);
+                seguros.SaveChanges();
+                return ConvertirAfpA_DTO2(afp);
+            }
         }
 
         public bool BorrarAfp(int idDeLaAfp)
@@ -38,7 +46,18 @@ namespace GestionDeSeguros
 
         public List<AfpRegistrada> ListarTodasLasAfp()
         {
-            throw new NotImplementedException();
+            using (DB_SegurosEntities seguros = new DB_SegurosEntities())
+            {
+                return seguros.tb_Afp.ToList().Select(x => ConvertirAfpA_DTO(x)).ToList();
+            }
+        }
+
+        public List<AfpActualizada> ListarTodasLasAfp2()
+        {
+            using (DB_SegurosEntities seguros = new DB_SegurosEntities())
+            {
+                return seguros.tb_Afp.ToList().Select(x => ConvertirAfpA_DTO2(x)).ToList();
+            }
         }
 
         private AfpRegistrada ConvertirAfpA_DTO(tb_Afp afp)
@@ -47,6 +66,14 @@ namespace GestionDeSeguros
             afpRegistrada.Id = afp.CodigoAfp ;
             afpRegistrada.Descripcion  = afp.Descripcion;
             return afpRegistrada;
+        }
+
+        private AfpActualizada ConvertirAfpA_DTO2(tb_Afp afp)
+        {
+            AfpActualizada afpActualizada = new AfpActualizada();
+            afpActualizada.Id = afp.CodigoAfp;
+            afpActualizada.Descripcion = afp.Descripcion;
+            return afpActualizada;
         }
     }
 }

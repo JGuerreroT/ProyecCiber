@@ -12,7 +12,8 @@ namespace Interfaces.Afps
     {
         AfpRegistrada CrearAfp(NuevaAfp nuevaAfp);
         List<AfpRegistrada> ListarTodasLasAfp();
-        AfpRegistrada ActualizarAfp(AfpActualizada afpActualizada);
+        List<AfpActualizada> ListarTodasLasAfp2();
+        AfpActualizada ActualizarAfp(AfpActualizada afpActualizada);
         bool BorrarAfp(int idDeLaAfp);
 
     }

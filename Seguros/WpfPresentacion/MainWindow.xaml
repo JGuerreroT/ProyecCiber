@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfPresentacion.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfPresentacion"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1000" WindowStartupLocation="CenterScreen" >
+    <Grid>
+        <Menu Margin="0,0,0.4,-0.2"  Height="50" VerticalAlignment="Top" >
+            <MenuItem Header="_Mantenimiento" x:Name="mnuMantenimiento">
+                <MenuItem Header="AFP" x:Name="mnuAFP" >
+                    <MenuItem.Icon >
+                        <Image Source="Images/AFP.png" Height="30" Width="30"></Image>
+                    </MenuItem.Icon>
+                    <MenuItem Header="Nueva" x:Name="mnuNuevaAfp" Click="mnuNuevaAfp_Click"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Header="Modificar" x:Name="mnuModicarAfp" Click="mnuModicarAfp_Click"></MenuItem>
+                </MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Compañía de Seguros" x:Name="mnuCompania" Click="mnuCompania_Click">
+                    <MenuItem.Icon >
+                        <Image Source="Images/compania.png" Height="30" Width="30"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Salir" x:Name="mnuSalir" Click="mnuSalir_Click">
+            </MenuItem>
+        </Menu>
+    </Grid>
+</Window>

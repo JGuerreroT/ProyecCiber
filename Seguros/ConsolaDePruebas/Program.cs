@@ -15,9 +15,15 @@ namespace ConsolaDePruebas
             GestorDeAfp gestorDeAfps = new GestorDeAfp();
 
             NuevaAfp nuevaAfp = new NuevaAfp();
-            nuevaAfp.Descripcion  = "AFP Integra";
+            nuevaAfp.Descripcion  = "AFP Primas";
             gestorDeAfps.CrearAfp(nuevaAfp);
 
+            AfpActualizada afpActualzada = new AfpActualizada();
+            afpActualzada.Id = 2;
+            afpActualzada.Descripcion = "AFP Prima";
+            gestorDeAfps.ActualizarAfp(afpActualzada);
+            
+            
         }
     }
 }
